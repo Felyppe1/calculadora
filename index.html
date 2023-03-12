@@ -4,44 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Calculadora Online</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- <div id="divide_symbol">
+    <div id="divide_symbol">
         <div id="circle"></div>
         <div id="traço"></div>
         <div id="circle"></div>
-    </div> -->
+    </div>
     <main class="main">
         <div class="screen">
-            <div class="screen_content"></div>
-            <!-- <div id="symbol1">+</div>
-            <div id="symbol2">-</div>
-            <div id="symbol3">x</div>
-            <div id="symbol4">/</div>
-            <div id="symbol5">%</div> --> 
+            <div id="first_value"></div>
+            <div id="second_value"></div>
         </div>
         <div class="on_button" onclick="ligar_limpar()">ON/AC</div>
-        <div class="all_buttons">
+        <div id="all_buttons">
+            <div id="numbers_container">
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
+                <button class="number">0</button>
+                <button class="number">00</button>
+                <button class="number">.</button>
+            </div>
+            <div id="operators_container">
+                <button class="operator">OFF</button>
+                <button value='apagar' class="operator">-></button>
+                <button class="operator">X</button>
+                <button class="operator">%</button>
+                <button class="operator">-</button>
+                <button class="operator">
+                    <div id="divide_symbol">
+                        <div id="circle"></div>
+                        <div id="traço"></div>
+                        <div id="circle"></div>
+                    </div>
+                </button>
+                <button class="operator bigger plus">+</button>
+                <button class="operator bigger">=</button>
+            </div>
+        </div>
+        
+        <!-- <div class="all_buttons">
             <div class="numbers">
-                <div><div onclick="printar(this)">7</div>
-                <div onclick="printar(this)">8</div>
-                <div onclick="printar(this)">9</div></div>
+                <div>
+                    <div onclick="printar(this)">7</div>
+                    <div onclick="printar(this)">8</div>
+                    <div onclick="printar(this)">9</div>
+                </div>
 
-                <div><div onclick="printar(this)">4</div>
-                <div onclick="printar(this)">5</div>
-                <div onclick="printar(this)">6</div></div>
+                <div>
+                    <div onclick="printar(this)">4</div>
+                    <div onclick="printar(this)">5</div>
+                    <div onclick="printar(this)">6</div>
+            </div>
                 
                 <div>
                     <div onclick="printar(this)">1</div>
-                <div onclick="printar(this)">2</div>
-                <div onclick="printar(this)">3</div>
+                    <div onclick="printar(this)">2</div>
+                    <div onclick="printar(this)">3</div>
                 </div>
                 
-                <div><div onclick="printar(this)">0</div>
-                <div onclick="printar(this)">00</div>
-                <div onclick="printar_virgula()">.</div></div>
+                <div>
+                    <div onclick="printar(this)">0</div>
+                    <div onclick="printar(this)">00</div>
+                    <div onclick="printar_virgula()">.</div>
+            </div>
                 
             </div>
             <div class="operators">
@@ -54,17 +90,16 @@
                 <div><div id="minus">-</div>
                 <div id="divide">/</div> </div>
                 
-                <!-- <div id="divide_symbol">
+                <div id="divide_symbol">
                         <div id="circle"></div>
                         <div id="traço"></div>
                         <div id="circle"></div>
-                    </div> -->
+                    </div>
                 <div><div id="plus">+</div>
                 <div id="equal">=</div></div>
                 
             </div>
-        </div>
+        </div> -->
     </main>
-    <script src="script.js"></script>
 </body>
 </html>
