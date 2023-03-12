@@ -57,7 +57,7 @@ body {
     font-size: 18px;
     position: absolute;
     top: 3px;
-    right: 2px;
+    right: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +72,7 @@ body {
     font-size: 18px;
     position: absolute;
     top: 19px;
-    right: 2px;
+    right: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +87,7 @@ body {
     font-size: 13px;
     position: absolute;
     top: 36px;
-    right: 2px;
+    right: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,13 +102,36 @@ body {
     font-size: 13px;
     position: absolute;
     top: 52px;
-    right: 2px;
+    right: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.symbol5 {
+#divide_symbol_small {
+    width: 16px;
+    height: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+#circle_small {
+    background-color: #c6c6c6c7;
+    width: 3px;
+    height: 3px;
+    border-radius: 10px;
+}
+
+#traço_small {
+    background-color: #c6c6c6c7;
+    width: 10px;
+    height: 1px;
+}
+
+#symbol5 {
     font-family: 'Arial', sans-serif;
     background-color: black;
     color: #c6c6c6c7;
@@ -117,7 +140,7 @@ body {
     font-size: 11px;
     position: absolute;
     top: 68px;
-    right: 2px;
+    right: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,7 +161,9 @@ body {
     font-size: 24px;
 }
 
-
+.on_button:active {
+    transform: scale(0.87);
+}
 
 #all_buttons {
     display: flex;
@@ -168,6 +193,10 @@ body {
     font-size: 56px;
 }
 
+.number:active {
+    transform: scale(0.87);
+}
+
 #operators_container {
     height: 66.5%;
     display: grid;
@@ -190,106 +219,9 @@ body {
     font-size: 36px;
 }
 
-.bigger {
-    height: 167px;
-    border-radius: 20px;
-    font-size: 60px;
+.operator:active {
+    transform: scale(0.87);
 }
-
-.plus {
-    background-color: #00F1B7;
-}
-
-
-
-
-
-
-
-
-
-.all_buttons {
-    display: flex;
-    width: 100%;
-    gap: 1rem;
-}
-
-/* .numbers {
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px 23px;
-} */
-
-.numbers {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    gap: 1rem
-}
-
-.numbers > div {
-    display: flex;
-    flex-direction: row; 
-    gap: 1.5rem;
-}
-
-.numbers > div > div {
-    background-color: #282828;
-    width: 100px;
-    height: 87px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 8px black;
-    cursor: pointer;
-    font-size: 56px;
-}
-
-.operators {
-    width: 37%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.3rem;
-}
-
-.operators > div {
-    display: flex;
-    gap: 1rem;
-}
-
-.operators > div > div {
-    background-color: #9d9d9d;
-    width: 100px;
-    height: 55px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 5px black;
-    cursor: pointer;
-    font-size: 36px;
-}
-
-.operators > div:nth-of-type(3) > div:nth-of-type(1) {
-    font-size: 70px;
-}
-
-.operators > div:nth-of-type(4) > div:nth-of-type(1) {
-    background-color: #00F1B7;
-    height: 167px;
-    border-radius: 20px;
-    font-size: 60px;
-}
-
-.operators > div:nth-of-type(4) > div:nth-of-type(2) {
-    height: 167px;
-    border-radius: 20px;
-    font-size: 60px;
-}
-
-
 
 #divide_symbol {
     width: 35px;
@@ -314,22 +246,36 @@ body {
     height: 3px;
 }
 
+.bigger {
+    height: 167px;
+    border-radius: 20px;
+    font-size: 60px;
+}
+
+.bigger:active {
+    transform: scale(0.93);
+}
+
+.plus {
+    background-color: #00F1B7;
+}
+
+
 .hidden {
     display: none;
 }
-
 
 
 @media screen and (max-width: 629px) {
     .main {
         width: 400px;
         height: 422px;
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 1rem 1rem;
     }
 
     .screen {
         height: 60px;
-        font-size: 60px;
+        font-size: 50px;
         padding-right: 1.5rem;
     }
 
@@ -359,6 +305,23 @@ body {
         top: 40px;
     }
 
+    #divide_symbol_small {
+        width: 13px;
+        height: 10px;
+        gap: 1px;
+    }
+    
+    #circle_small {
+        width: 2px;
+        height: 2px;
+        border-radius: 10px;
+    }
+    
+    #traço_small {
+        width: 8px;
+        height: 0.5px;
+    }
+
     .on_button {
         width: 60px;
         height: 33px;
@@ -366,47 +329,124 @@ body {
         margin: 14px 0;
     }
 
-    .numbers {
-        width: 65%;
-        gap: 0.6rem;
+    #numbers_container {
+        gap: 0.9rem 1.1rem;
     }
 
-    .numbers > div {
-        gap: 0.9rem;
-    }
-
-    .numbers > div > div {
+    .number {
         width: 60px;
         height: 52px;
         font-size: 42px;
         box-shadow: 0px 0px 4px black;
     }
 
-    .operators {
-        width: 39%;
-        gap: 0.8rem;
+    #operators_container {
+        gap: 1.1rem 1rem;
     }
 
-    .operators > div > div {
+    .operator {
         width: 60px;
         height: 33px;
         font-size: 20px;
         border-radius: 17px;
     }
 
-    .operators > div:nth-of-type(3) > div:nth-of-type(1) {
-        font-size: 50px;
+    #operators_container > button:nth-of-type(5) {  /*botão de subtrair*/
+        font-size: 34px;
+    }
+
+    #divide_symbol {
+        width: 30px;
+        height: 30px;
+        gap: 4px;
     }
     
-    .operators > div:nth-of-type(4) > div:nth-of-type(1) {
+    #circle {
+        width: 4px;
+        height: 4px;
+    }
+    
+    #traço {
+        width: 23px;
+        height: 2px;
+    }
+
+    .bigger {
         height: 98px;
         border-radius: 16px;
         font-size: 50px;
     }
+}
+
+@media screen and (max-width: 400px) {
+    .main {
+        width: 260px;
+        height: 274px;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .screen {
+        height: 34px;
+        font-size: 36px;
+        padding-right: 1.3rem;
+    }
+
+    #symbol2, #symbol3, #symbol4 {
+        top: 3px;
+    }
+
+    .on_button {
+        width: 35px;
+        height: 19.25px;
+        font-size: 10px;
+        margin: 14px 0;
+    }
+
+    #numbers_container {
+        gap: 0.5rem 0.8rem;
+    }
+
+    .number {
+        width: 35px;
+        height: 30px;
+        font-size: 24px;
+        box-shadow: 0px 0px 4px black;
+    }
+
+    #operators_container {
+        gap: 0.6rem 0.7rem;
+    }
+
+    .operator {
+        width: 35px;
+        height: 19.25px;
+        font-size: 14px;
+        border-radius: 17px;
+    }
+
+    #operators_container > button:nth-of-type(5) {  /*botão de subtrair*/
+        font-size: 26px;
+    }
+
+    #divide_symbol {
+        width: 20px;
+        height: 18px;
+        gap: 2.5px;
+    }
     
-    .operators > div:nth-of-type(4) > div:nth-of-type(2) {
-        height: 98px;
-        border-radius: 16px;
-        font-size: 50px;
+    #circle {
+        width: 3px;
+        height: 3px;
+    }
+    
+    #traço {
+        width: 16px;
+        height: 2px;
+    }
+
+    .bigger {
+        height: 56px;
+        border-radius: 8px;
+        font-size: 30px;
     }
 }
